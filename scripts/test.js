@@ -115,7 +115,52 @@ function getDivCardForNationalPark(park){
 }
  */
 
+function getDivCardForNationalPark() {
+    let outerDiv = document.createElement("div");
+    outerDiv.className = "col-4";
+    //----------------------------------------------
+    let cardDiv1 = document.createElement("div");
+    cardDiv1.className = "card";
+    cardDiv1.style.width = "18rem";
 
+
+    //----------------------------------------------
+    let cardDiv2 = document.createElement("div");
+    cardDiv2.className = "card-body";
+
+    
+    //----------------------------------------------
+    let h5 = document.createElement("h5");
+    h5.className = "card-title";
+
+
+    //----------------------------------------------
+    let p1 = document.createElement("p");
+    p.className = "card-text";
+
+    //----------------------------------------------
+    let p2 = document.createElement("p");
+    p.className = "card-text";
+
+    //----------------------------------------------
+    let p3 = document.createElement("p");
+    p.className = "card-text";
+
+
+    //----------------------------------------------
+    let a = document.createElement("a");
+    a.attributes = "href";
+
+    // appending children
+    document.body.appendChild(outerDiv);
+   /*  outerDiv.appendChild(cardDiv1);
+    cardDiv1.appendChild(cardDiv2);
+    cardDiv2.appendChild(h5);
+    cardDiv2.appendChild(p1);
+    cardDiv2.appendChild(p2);
+    cardDiv2.appendChild(p3);
+    cardDiv2.appendChild(a); */
+}
 
 
 
