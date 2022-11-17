@@ -1,7 +1,7 @@
 "use strict";
 
 
-window.onload = function() {
+window.onload = function () {
     fillStateDropdown();
     fillParkTypDropdown();
 
@@ -9,32 +9,34 @@ window.onload = function() {
     selectLocationOptionHide();
     selectParkTypeOptionHide();
     selectParkTypeOptionShow();
-    
-    document.getElementById("radioLocationBtn").onchange = currentlySelectedSearchType;
-    document.getElementById("radioParkTypeBtn").onchange = currentlySelectedSearchType;
-    /* document.getElementById("stateSlct").onchange = nationalStateSelect(); */ 
+
+    document.getElementById("radioLocationBtn").checked;
+    document.getElementById("radioLocationBtn").onchange = currentlySelectedSearchType1;
+    document.getElementById("radioParkTypeBtn").onchange = currentlySelectedSearchType2;
+
+
 }
 
 // Dropdown fill --------------------------------------------------------------------------------------
-function fillStateDropdown() { 
+function fillStateDropdown() {
     const stateSelect = document.getElementById("stateSlct");
     let selectStateOpt = document.createElement("option");
 
     selectStateOpt.value = "";
     selectStateOpt.textContent = "Select a State...";
-    stateSelect.appendChild(selectStateOpt); 
+    stateSelect.appendChild(selectStateOpt);
 
-    let locationLength = locationValues.length; 
+    let locationLength = locationValues.length;
     for (let i = 0; i < locationLength; i++) {
         let Opt1 = document.createElement("option");
         Opt1.value = locationValues[i];
         Opt1.textContent = locationValues[i];
 
-       stateSelect.appendChild(Opt1); 
+        stateSelect.appendChild(Opt1);
     }
 }
 
-function fillParkTypDropdown() { 
+function fillParkTypDropdown() {
     const parkType = document.getElementById("parkTyp");
     let selectParkTyp = document.createElement("option");
 
@@ -42,24 +44,24 @@ function fillParkTypDropdown() {
     selectParkTyp.textContent = "Select Park Type..."
     parkType.appendChild(selectParkTyp);
 
-    let typeLength = ParkTypes.length; 
+    let typeLength = ParkTypes.length;
     for (let i = 0; i < typeLength; i++) {
         let Opt2 = document.createElement("option");
         Opt2.value = ParkTypes[i];
         Opt2.textContent = ParkTypes[i];
 
-       parkType.appendChild(Opt2);
+        parkType.appendChild(Opt2);
     }
 }
 
 // Radio buttons----------------------------------------------------------------------------------------
 
-function selectLocationOptionHide() { 
+function selectLocationOptionHide() {
     //document.querySelector("#stateSlct").innerHTML = "";
     document.getElementById("stateContainer").style.display = "none";
 }
 
-function selectLocationOptionShow() { 
+function selectLocationOptionShow() {
     document.getElementById("stateContainer").style.display = "block";
 }
 
@@ -71,24 +73,28 @@ function selectParkTypeOptionShow() {
     document.getElementById("parkTypContainer").style.display = "block";
 }
 
-function currentlySelectedSearchType() { 
+function currentlySelectedSearchType1() {
     let radioLocation = document.getElementById("radioLocationBtn");
-    let radioParkType = document.getElementById("radioParkTypeBtn");
-
-    if (radioLocation == radioLocation){
+    if (radioLocation == radioLocation) {
         selectLocationOptionShow();
         selectParkTypeOptionHide();
     }
-    else if (radioParkType == radioParkType){
+}
+
+function currentlySelectedSearchType2() {
+    let radioParkType = document.getElementById("radioParkTypeBtn");
+    if (radioParkType == radioParkType) {
         selectParkTypeOptionShow();
         selectLocationOptionHide();
     }
 }
 
+
+
 //------------------------------------------------------------------------------------------------------
-function showAllResults(parks){
+function showAllResults(parks) {
     //first clear out anything already in resultsContainer so that it is empty.
-    
+
     //next loop thorugh parks, and call getDivCardForNationalPark to get a div
     //that represents that park.
 
@@ -96,7 +102,7 @@ function showAllResults(parks){
     //the user can
 }
 
-function getDivCardForNationalPark(park){
+function getDivCardForNationalPark(park) {
     let outerDiv = document.createElement("div");
     outerDiv.className = "col-4";
 
