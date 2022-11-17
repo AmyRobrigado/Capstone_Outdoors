@@ -1,22 +1,24 @@
+"use strict"
+
 "use strict";
 
 
 window.onload = function() {
+    // Populate Options
     fillStateDropdown();
     fillParkTypDropdown();
 
-    selectLocationOptionShow();
-    selectLocationOptionHide();
+    // Hide or show select fields
+    //selectLocationOptionHide();
     selectParkTypeOptionHide();
-    selectParkTypeOptionShow();
-    
+
+    // onchange event for location
     document.getElementById("radioLocationBtn").onchange = currentlySelectedSearchType;
-    document.getElementById("radioParkTypeBtn").onchange = currentlySelectedSearchType;
     /* document.getElementById("stateSlct").onchange = nationalStateSelect(); */ 
 }
 
-// Dropdown fill --------------------------------------------------------------------------------------
-function fillStateDropdown() { 
+// Dropdown fill
+function fillStateDropdown() { // State Dropdown Working - loading options 
     const stateSelect = document.getElementById("stateSlct");
     let selectStateOpt = document.createElement("option");
 
@@ -34,7 +36,7 @@ function fillStateDropdown() {
     }
 }
 
-function fillParkTypDropdown() { 
+function fillParkTypDropdown() {  // Park Type Dropdown Working - Loading options
     const parkType = document.getElementById("parkTyp");
     let selectParkTyp = document.createElement("option");
 
@@ -52,40 +54,33 @@ function fillParkTypDropdown() {
     }
 }
 
-// Radio buttons----------------------------------------------------------------------------------------
-
-function selectLocationOptionHide() { 
+// Selecting the location radio button 
+function selectLocationOptionHide() { // To hide the location field - working
     //document.querySelector("#stateSlct").innerHTML = "";
     document.getElementById("stateContainer").style.display = "none";
 }
 
-function selectLocationOptionShow() { 
-    document.getElementById("stateContainer").style.display = "block";
-}
-
-function selectParkTypeOptionHide() {
-    document.getElementById("parkTypContainer").style.display = "none";
-}
-
-function selectParkTypeOptionShow() {
+// Selecting the location radio button 
+function selectLocationOptionShow() { // To hide the location field - working
     document.getElementById("parkTypContainer").style.display = "block";
 }
 
+
+
+function selectParkTypeOptionHide() { // To hide the parktype field 
+    document.querySelector("#parkTyp").innerHTML = "";
+}
+
+
 function currentlySelectedSearchType() { 
     let radioLocation = document.getElementById("radioLocationBtn");
-    let radioParkType = document.getElementById("radioParkTypeBtn");
+    //let radioParkType = document.getElementById("parkTyp");
 
     if (radioLocation == radioLocation){
-        selectLocationOptionShow();
         selectParkTypeOptionHide();
-    }
-    else if (radioParkType == radioParkType){
-        selectParkTypeOptionShow();
-        selectLocationOptionHide();
     }
 }
 
-//------------------------------------------------------------------------------------------------------
 function showAllResults(parks){
     //first clear out anything already in resultsContainer so that it is empty.
     
@@ -119,3 +114,20 @@ function getDivCardForNationalPark(park){
     }
 }
  */
+
+
+
+
+
+
+
+
+
+
+//create functions: selectlocationhide, selectlocationshow, selectparktypehide, selectparktypeshow
+// create functions: filterparksbylocation, filterparksbyparktype
+//create function: searchtypeonchange *place both onchanges onto the same function*
+//create radio buttons for search by location
+//create search results card
+
+

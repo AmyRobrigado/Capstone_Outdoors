@@ -24,24 +24,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/pages/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="/pages/search.html">National Parks</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/info.html">Mountain Info</a>
                     </li>
                 </ul>
             </div>
@@ -67,27 +56,26 @@
                     <!-- radio buttons -->
                     <div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="searchtype" id="radioLocationBtn">
+                            <label class="form-check-label" for="radioLocationBtn">
                                 Search by Location
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                                checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
+                            <input class="form-check-input" type="radio" name="searchtype" id="radioParkTypeBtn">
+                            <label class="form-check-label" for="radioParkTypeBtn">
                                 Search by Park Type
                             </label>
                         </div>
                     </div>
                     <!-- forms -->
-                    <div class="col-6">
+                    <div id="stateContainer">
                         <form>
                             <select class="form-select" aria-label="Default select example" id="stateSlct">
                             </select>
                         </form>
                     </div>
-                    <div class="col-6">
+                    <div id="parkTypContainer">
                         <form>
                             <select class="form-select" aria-label="Default select example" id="parkTyp">
 
@@ -104,65 +92,64 @@
 
         <!-- list results -->
         <div class="container">
-            <div class="row">
+            <div id="resultsContainer" class="row">
 
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">Acadia National Park</h5>
+                            <p class="card-text"></p>
+                            <a href="https://www.nps.gov/acad/index.htm" class="btn btn-primary">Visit Website</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
+                            <h5 class="card-title">Alcatraz Island</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="https://www.nps.gov/places/alcatraz-island.htm" class="btn btn-primary">Visit Website</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
+                            <h5 class="card-title">Antietam National Battlefield</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="https://www.nps.gov/anti/index.htm" class="btn btn-primary">Visit Website</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
+                            <h5 class="card-title">Appalachian National Scenic Trail</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="https://www.nps.gov/appa/index.htm" class="btn btn-primary">Visit Website</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
+                            <h5 class="card-title">Arches National Park</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="https://www.nps.gov/arch/index.htm" class="btn btn-primary">Visit Website</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
+                            <h5 class="card-title">Assateague Island National Seashore</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="https://www.nps.gov/asis/index.htm" class="btn btn-primary">Visit Website</a>
                         </div>
                     </div>
                 </div>
@@ -176,6 +163,10 @@
 
 
     <!-- main script -->
+    <script src="/scripts/nationalparkdata.js"></script>
+    <script src="/scripts/mountaindata.js"></script>
+    <script src="/scripts/locationdata.js"></script>
+    <script src="/scripts/parktypedata.js"></script>
     <script src="/scripts/search.js"></script>
 
     <!-- bootstrap script -->
