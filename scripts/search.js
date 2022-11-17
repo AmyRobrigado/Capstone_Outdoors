@@ -2,14 +2,17 @@
 
 
 window.onload = function () {
+    // dropdown fills
     fillStateDropdown();
     fillParkTypDropdown();
 
+    // hide / show form fields
     selectLocationOptionShow();
     selectLocationOptionHide();
     selectParkTypeOptionHide();
     selectParkTypeOptionShow();
 
+    // onchange events
     document.getElementById("radioLocationBtn").checked;
     document.getElementById("radioLocationBtn").onchange = currentlySelectedSearchType1;
     document.getElementById("radioParkTypeBtn").onchange = currentlySelectedSearchType2;
@@ -17,7 +20,7 @@ window.onload = function () {
 
 }
 
-// Dropdown fill --------------------------------------------------------------------------------------
+// Dropdown fill (working)--------------------------------------------------------------------------------------
 function fillStateDropdown() {
     const stateSelect = document.getElementById("stateSlct");
     let selectStateOpt = document.createElement("option");
@@ -54,7 +57,7 @@ function fillParkTypDropdown() {
     }
 }
 
-// Radio buttons----------------------------------------------------------------------------------------
+// Radio buttons (working...)----------------------------------------------------------------------------------------
 
 function selectLocationOptionHide() {
     //document.querySelector("#stateSlct").innerHTML = "";
@@ -91,7 +94,8 @@ function currentlySelectedSearchType2() {
 
 
 
-//------------------------------------------------------------------------------------------------------
+// Cards ------------------------------------------------------------------------------------------------------
+
 function showAllResults(parks) {
     //first clear out anything already in resultsContainer so that it is empty.
 
@@ -105,14 +109,37 @@ function showAllResults(parks) {
 function getDivCardForNationalPark(park) {
     let outerDiv = document.createElement("div");
     outerDiv.className = "col-4";
-
-    let cardDiv = document.createElement("div");
-    cardDiv.className = "card";
-    cardDiv.style.width = "18rem";
-
-    outerDiv.appendChild(cardDiv);
+    //----------------------------------------------
+    let cardDiv1 = document.createElement("div");
+    cardDiv1.className = "card";
+    cardDiv1.style.width = "18rem";
 
 
+    //----------------------------------------------
+    let cardDiv2 = document.createElement("div");
+    cardDiv2.className = "card-body";
+
+
+    //----------------------------------------------
+    let h5 = document.createElement("h5");
+    h5.className = "card-title";
+
+
+    //----------------------------------------------
+    let p = document.createElement("p");
+    p.className = "card-text";
+
+
+    //----------------------------------------------
+    let a = document.createElement("a");
+    a.attributes = "href";
+
+    // appending children
+    outerDiv.appendChild(cardDiv1);
+    cardDiv1.appendChild(cardDiv2);
+    cardDiv2.appendChild(h5);
+    cardDiv2.appendChild(p);
+    cardDiv2.appendChild(a);
 }
 
 /* function whenLocationSelected() { // figuring out which is the selected option, hide / show appropriate areas
