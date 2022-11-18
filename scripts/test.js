@@ -116,6 +116,17 @@ function getDivCardForNationalPark(park){
  */
 
 function getDivCardForNationalPark() {
+    /* let mainContainer = document.getElementById("container");    
+    let mainDiv = document.getElementById("resultsContainer");
+
+
+
+    let outerDiv = document.createElement("div");
+    outerDiv.className = "col-4";
+
+    mainContainer.appendChild(mainDiv);
+    mainDiv.appendChild(outerDiv);
+    ;  */
     let outerDiv = document.createElement("div");
     outerDiv.className = "col-4";
     //----------------------------------------------
@@ -149,7 +160,9 @@ function getDivCardForNationalPark() {
 
     //----------------------------------------------
     let a = document.createElement("a");
-    a.attributes = "href";
+    a.href = "https://www.nps.gov/acad/index.html";
+    a.classList = "btn btn-primary";
+    
 
     // appending children
     document.body.appendChild(outerDiv);

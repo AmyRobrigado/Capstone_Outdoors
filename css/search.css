@@ -1,7 +1,8 @@
 
-#box-outline {
+.resultsContainer {
     width: 5px;
     height: 5px;
     border: 10px;
-    color: black;
+    color: gray;
 }
+
