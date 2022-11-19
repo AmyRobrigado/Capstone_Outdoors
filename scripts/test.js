@@ -174,18 +174,196 @@ function getDivCardForNationalPark() {
     cardDiv2.appendChild(p3);
     cardDiv2.appendChild(a); */
 }
+function locationSelectCards() {
+    const resultsContainer = document.getElementById("resultsContainer");
+    resultsContainer.innerHTML = "";
+
+    function locationSelectCards() {
+        const resultsContainer = document.getElementById("resultsContainer");
+        resultsContainer.innerHTML = "";
+    
+        let selectThisState = document.getElementById("stateSlct").value;
+    
+        for (let i = 0; i < locationValues.length; i++) {
+            if (locationValues[i] == selectThisState) {
+                let outerDiv = document.createElement("div");
+                outerDiv.className = "col-4";
+    
+                resultsContainer.appendChild(outerDiv);
+                //--------------------------------------------------------
+                let cardDiv1 = document.createElement("div");
+                cardDiv1.className = "card";
+                cardDiv1.style.width = "18rem";
+    
+                outerDiv.appendChild(cardDiv1);
+                //--------------------------------------------------------
+                let cardDiv2 = document.createElement("div");
+                cardDiv2.className = "card-body";
+    
+                cardDiv1.appendChild(cardDiv2);
+                //--------------------------------------------------------
+                let h5 = document.createElement("h5");
+                h5.className = "card-title";
+                h5.innerHTML = selectThisState;
+    
+                cardDiv2.appendChild(h5);
+                //----------------------------------------------
+                let p1 = document.createElement("p");
+                p1.className = "card-text";
+                p1.innerHTML = "test";
+    
+                cardDiv2.appendChild(p1);
+                //----------------------------------------------
+                let p2 = document.createElement("p");
+                p2.className = "card-text";
+                p2.innerHTML = "test";
+    
+                cardDiv2.appendChild(p2);
+                //----------------------------------------------
+                let p3 = document.createElement("p");
+                p3.className = "card-text";
+                p3.innerHTML = "test";
+    
+                cardDiv2.appendChild(p3);
+                //----------------------------------------------
+                let a = document.createElement("a");
+                a.className = "btn btn-primary";
+                a.innerText = "Visit Website";
+                a.href = "https://www.nps.gov/acad/index.htm";
+    
+    
+                cardDiv2.appendChild(a);
+            }
+        }
+    }
+
+    for (let i = 0; i < locationValues.length; i++) {
+        if (locationValues[i] == selectThisState) {
+            let outerDiv = document.createElement("div");
+            outerDiv.className = "col-4";
+
+            resultsContainer.appendChild(outerDiv);
+            //--------------------------------------------------------
+            let cardDiv1 = document.createElement("div");
+            cardDiv1.className = "card";
+            cardDiv1.style.width = "18rem";
+
+            outerDiv.appendChild(cardDiv1);
+            //--------------------------------------------------------
+            let cardDiv2 = document.createElement("div");
+            cardDiv2.className = "card-body";
+
+            cardDiv1.appendChild(cardDiv2);
+            //--------------------------------------------------------
+            let h5 = document.createElement("h5");
+            h5.className = "card-title";
+            h5.innerHTML = selectThisState;
+
+            cardDiv2.appendChild(h5);
+            //----------------------------------------------
+            let p1 = document.createElement("p");
+            p1.className = "card-text";
+            p1.innerHTML = "test";
+
+            cardDiv2.appendChild(p1);
+            //----------------------------------------------
+            let p2 = document.createElement("p");
+            p2.className = "card-text";
+            p2.innerHTML = "test";
+
+            cardDiv2.appendChild(p2);
+            //----------------------------------------------
+            let p3 = document.createElement("p");
+            p3.className = "card-text";
+            p3.innerHTML = "test";
+
+            cardDiv2.appendChild(p3);
+            //----------------------------------------------
+            let a = document.createElement("a");
+            a.className = "btn btn-primary";
+            a.innerText = "Visit Website";
+            a.href = "https://www.nps.gov/acad/index.htm";
+
+
+            cardDiv2.appendChild(a);
+        }
+    }
+}
+
+function parkTypeCards() {
+    const resultsContainer = document.getElementById("resultsContainer");
+    resultsContainer.innerHTML = "";
+
+    let selectThisParkType = document.getElementById("parkTyp").value;
+
+    for (let i = 0; i < ParkTypes.length; i++) {
+        if (ParkTypes[i] == selectThisParkType) {
+            let outerDiv = document.createElement("div");
+            outerDiv.className = "col-4";
+
+            resultsContainer.appendChild(outerDiv);
+            //--------------------------------------------------------
+            let cardDiv1 = document.createElement("div");
+            cardDiv1.className = "card";
+            cardDiv1.style.width = "18rem";
+
+            outerDiv.appendChild(cardDiv1);
+            //--------------------------------------------------------
+            let cardDiv2 = document.createElement("div");
+            cardDiv2.className = "card-body";
+
+            cardDiv1.appendChild(cardDiv2);
+            //--------------------------------------------------------
+            let h5 = document.createElement("h5");
+            h5.className = "card-title";
+            h5.innerHTML = selectThisParkType;
+
+            cardDiv2.appendChild(h5);
+            //----------------------------------------------
+            let p1 = document.createElement("p");
+            p1.className = "card-text";
+            p1.innerHTML = "test";
+
+            cardDiv2.appendChild(p1);
+            //----------------------------------------------
+            let p2 = document.createElement("p");
+            p2.className = "card-text";
+            p2.innerHTML = "test";
+
+            cardDiv2.appendChild(p2);
+            //----------------------------------------------
+            let p3 = document.createElement("p");
+            p3.className = "card-text";
+            p3.innerHTML = "test";
+
+            cardDiv2.appendChild(p3);
+            //----------------------------------------------
+            let a = document.createElement("a");
+            a.className = "btn btn-primary";
+            a.innerText = "Visit Website";
+            a.href = "https://www.nps.gov/acad/index.htm";
+
+
+            cardDiv2.appendChild(a);
+        }
+    }
+}
+
+function returnLocationName(parks) {
+    for (let i = 0; nationalParks.length; i++){
+     return parks[i].LocationName;
+    }
+ }
 
 
 
+//function showAllResults(parks) {
+//first clear out anything already in resultsContainer so that it is empty.
 
+//next loop thorugh parks, and call getDivCardForNationalPark to get a div
+//that represents that park.
 
-
-
-
-//create functions: selectlocationhide, selectlocationshow, selectparktypehide, selectparktypeshow
-// create functions: filterparksbylocation, filterparksbyparktype
-//create function: searchtypeonchange *place both onchanges onto the same function*
-//create radio buttons for search by location
-//create search results card
-
+//next add the result of getDivCardForNationalPark to the resultsContainer so that
+//the user can
+//
 

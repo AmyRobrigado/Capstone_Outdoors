@@ -1,6 +1,5 @@
 "use strict";
 
-
 window.onload = function () {
     // dropdown fills
     fillStateDropdown();
@@ -13,11 +12,13 @@ window.onload = function () {
     selectParkTypeOptionShow();
 
     // onchange events
-
     document.getElementById("radioLocationBtn").onchange = currentlySelectedSearchType1;
     document.getElementById("radioParkTypeBtn").onchange = currentlySelectedSearchType2;
 
-    document.getElementById("stateSlct").onchange = testDivCreate; //test 
+    document.getElementById("stateSlct").onchange = nationalLocationSelectCards;
+    
+    // 
+    filterNationalByState()
 }
 
 // Dropdown fill (working)--------------------------------------------------------------------------------------
@@ -91,28 +92,17 @@ function currentlySelectedSearchType2() {
     }
 
 }
-
-
-
 // Cards ------------------------------------------------------------------------------------------------------
 
-//function showAllResults(parks) {
-//first clear out anything already in resultsContainer so that it is empty.
-
-//next loop thorugh parks, and call getDivCardForNationalPark to get a div
-//that represents that park.
-
-//next add the result of getDivCardForNationalPark to the resultsContainer so that
-//the user can
-//}
-function testDivCreate() {
+function nationalLocationSelectCards() {
     const resultsContainer = document.getElementById("resultsContainer");
+
     resultsContainer.innerHTML = "";
 
     let selectThisState = document.getElementById("stateSlct").value;
 
-    for (let i = 0; i < locationValues.length; i++) {
-        if (locationValues[i] == selectThisState) {
+    for (let i = 0; i < nationalParks.length; i++) { // 
+        if (nationalParks[i].State == selectThisState) {
             let outerDiv = document.createElement("div");
             outerDiv.className = "col-4";
 
@@ -126,36 +116,38 @@ function testDivCreate() {
             //--------------------------------------------------------
             let cardDiv2 = document.createElement("div");
             cardDiv2.className = "card-body";
-            
+
             cardDiv1.appendChild(cardDiv2);
             //--------------------------------------------------------
             let h5 = document.createElement("h5");
             h5.className = "card-title";
-            h5.innerHTML = selectThisState;
+            h5.innerHTML = nationalParks[i].LocationName;
 
-            cardDiv2.appendChild(h5);
+                cardDiv2.appendChild(h5);
             //----------------------------------------------
             let p1 = document.createElement("p");
-            p.className = "card-text";
-            p.innerHTML = "test";
+            p1.className = "card-text";
+            p1.innerHTML = nationalParks[i].Address;
 
             cardDiv2.appendChild(p1);
             //----------------------------------------------
             let p2 = document.createElement("p");
-            p.className = "card-text";
-            p.innerHTML = "test";
+            p2.className = "card-text";
+            p2.innerHTML = nationalParks[i].City + " , " + nationalParks[i].State + "  " + nationalParks[i].ZipCode;
 
             cardDiv2.appendChild(p2);
             //----------------------------------------------
             let p3 = document.createElement("p");
-            p.className = "card-text";
-            p.innerHTML = "test";
+            p3.className = "card-text";
+            p3.innerHTML = nationalParks[i].Phone;
 
             cardDiv2.appendChild(p3);
             //----------------------------------------------
             let a = document.createElement("a");
-            a.href = "https://www.nps.gov/acad/index.htm";
-            a.classList = "btn btn-primary";
+            a.className = "btn btn-primary";
+            a.innerText = "Visit Website";
+            a.href = nationalParks[i].Visit;
+
 
             cardDiv2.appendChild(a);
         }
@@ -163,18 +155,3 @@ function testDivCreate() {
 }
 
 
-
-/* function getDivCardForNationalPark() { // make sure to append the divs to the containers 
-    
-} */
-
-/* function whenLocationSelected() { // figuring out which is the selected option, hide / show appropriate areas
-    let selected = currentlySelectedSearchType();
-    if (current == "location") {
-        selectParkTypeOptionHide();
-    }
-    else if (current == "parktype") {
-        selectLocationOptionHide();
-    }
-}
- */
