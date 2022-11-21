@@ -152,16 +152,15 @@ function nationalLocationSelectCards() { // working..
     }
 }
 
-function nationalParkTypeSelectCards() { // in-progress 
+function nationalParkTypeSelectCards() { // working
     const resultsContainer = document.getElementById("resultsContainer");
 
     resultsContainer.innerHTML = "";
 
     let selectParkType = document.getElementById("parkTyp").value;
-    let findParkType = nationalParks.filter(np => np.LocationName.substring(0) == selectParkType)
-
+    
     for (let i = 0; i < nationalParks.length; i++) { // 
-        if (findParkType == selectParkType) {
+        if (nationalParks[i].LocationName.indexOf(selectParkType)!= -1) {
             let outerDiv = document.createElement("div");
             outerDiv.className = "col-lg-4 col-sm-6";
 
