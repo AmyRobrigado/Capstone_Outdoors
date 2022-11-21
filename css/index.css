@@ -6,15 +6,21 @@ h1, p, label {
     color: azure;
 }
 
+#horizontal {
+   border: 1px dashed azure;
+}
+
+#cordelis-national, #home-text {
+    color: rgb(54, 112, 93);
+}
+
 #home-text {
     text-align: center;
 }
 
 button {
-    text-align: center;
+    border-radius: 10px;
 }
-
-
 
 .navbar .navbar-expand {
     background-color: transparent;
@@ -40,3 +46,5 @@ button {
         height: 100%;
     }
 }
+
+
