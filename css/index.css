@@ -2,8 +2,13 @@ body,html {
     height: 100% 
 }
 
-h1, p, label {
+h1, label, #mount-text, #nation-text, #news, #team {
     color: azure;
+}
+
+#forest, #team {
+    opacity: 0.8;
+    border-radius: 15px;
 }
 
 #horizontal {
