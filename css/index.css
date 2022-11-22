@@ -16,7 +16,8 @@ h1, label, #mount-text, #nation-text, #news, #team {
 }
 
 #cordelis-national, #home-text {
-    color: rgb(54, 112, 93);
+    color: azure;
+    text-shadow: 2px 2px black;
 }
 
 #home-text {

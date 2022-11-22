@@ -71,16 +71,10 @@ function selectMountainCards() {
             //-----------------------------------------
             let div4 = document.createElement("div");
             div4.className = "card-footer text-muted";
-            div4.innerHTML = mountainsArray[i].effort;
+            div4.innerHTML = "Effort: " + mountainsArray[i].effort;
 
             div1.appendChild(div4);
 
         }
     }
 }
-
-
-
-
-
-
