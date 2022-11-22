@@ -69,12 +69,6 @@ function selectMountainCards() {
 
             div3.appendChild(p3);
             //-----------------------------------------
-            let img = document.createElement("img");
-            img.src = "images/mountains/" + mountainsArray[i].img;
-            img.alt = mountainsArray[i].name;
-            img.className = "card-img";
-            div3.appendChild(img);
-            //-----------------------------------------
             let div4 = document.createElement("div");
             div4.className = "card-footer text-muted";
             div4.innerHTML = mountainsArray[i].effort;
